@@ -51,13 +51,6 @@ resource "aws_launch_configuration" "cluster" {
     volume_size = "40"
     volume_type = "standard"
   }
-  user_data = << EOF
-  #! /bin/bash
-  mkfs -t ext4 /dev/xvdb
-  mkdir /mnt/disk1
-  echo "/dev/xvdb /opt/mount1 ext4 defaults,nofail 0 2" >> /etc/fstab
-  mount -a
-  EOF
 }
 
 resource "aws_autoscaling_group" "cluster" {
