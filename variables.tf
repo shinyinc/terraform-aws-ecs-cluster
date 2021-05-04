@@ -176,7 +176,7 @@ variable "asg_capacity_provider_manage_termination_protection" {
 variable "asg_capacity_provider_manage_scaling" {
   description = "Whether or not to allow ECS to manage scaling for the ASG capacity provider (\"yes\" or \"no\")."
   type        = string
-  default     = "yes"
+  default     = "no"
 }
 variable "asg_capacity_provider_minimum_scaling_step_size" {
   description = "The minimum scaling step size for ECS managed scaling of the ASG capacity provider."
@@ -186,10 +186,10 @@ variable "asg_capacity_provider_minimum_scaling_step_size" {
 variable "asg_capacity_provider_maximum_scaling_step_size" {
   description = "The maximum scaling step size for ECS managed scaling of the ASG capacity provider."
   type        = number
-  default     = 1000
+  default     = 1
 }
 variable "asg_capacity_provider_target_capacity" {
   description = "The target capacity, as a percentage from 1 to 100, for the ASG capacity provider."
   type        = number
-  default     = 100
+  default     = 1
 }
