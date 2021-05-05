@@ -46,11 +46,11 @@ resource "aws_launch_configuration" "cluster" {
   lifecycle {
     create_before_destroy = true
   }
-  ebs_block_device {
-    device_name = "/dev/sdb"
-    volume_size = "40"
-    volume_type = "standard"
-  }
+  #ebs_block_device {
+  #  device_name = "/dev/sdb"
+  #  volume_size = "40"
+  #  volume_type = "standard"
+  #}
 }
 
 resource "aws_autoscaling_group" "cluster" {
